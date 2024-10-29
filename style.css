@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeff5;
+}
+
+#app-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#player {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+#album-art img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#track-name {
+    color: #555;
+    font-size: 18px;
+}
+
+#album-name {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#track-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+#s-area {
+    position: relative;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#seek-bar {
+    height: 100%;
+    width: 0;
+    background-color: #fd6d94;
+    border-radius: 5px;
+}
+
+#player-controls {
+    margin-top: 20px;
+}
+
+.button {
+    font-size: 20px;
+    color: #fd6d94;
+    cursor: pointer;
+}
+
+.button i {
+    transition: color 0.3s;
+}
+
+.button:hover i {
+    color: #ff4b73;
+}
