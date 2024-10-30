@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloe-Inspired Countdown - Classic Soft Blue & Denim</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .box {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 15px;
+            min-width: 60px;
+            height: 60px; /* Adjusted for cubed dimensions */
+            background-color: #D6EAF8; /* Soft Blue */
+            border: 3px solid #2980B9; /* Denim Blue */
+            color: #2E4053; /* Charcoal */
+            font-size: 20px;
+            margin: 10px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3); /* Soft shadow */
+            vertical-align: top; /* Align boxes properly */
+        }
+        .box span {
+            display: block;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        h2 {
+            margin: 0;
+        }
+        h3 {
+            margin: 20px 0 0 0;
+            font-size: 30px;
+            color: #2980B9; /* Denim Blue */
+            font-family: 'Satisfy', cursive; /* More 'angelic' font */
+        }
+        .small {
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        /* Star icon */
+        .box:before {
+            content: '★';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 20px;
+            color: #2980B9; /* Denim Blue */
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">
+        <h2 class="box" id="days"></h2>
+        <h2 class="box" id="hours"></h2>
+        <h2 class="box" id="minutes"></h2>
+        <h2 class="box" id="seconds"></h2>
+    </div>
+    <h3>Time Left in This Month</h3>
+
+    <script>
+        function CountDownTimer() {
+            left_days = document.getElementById("days");
+            left_hours = document.getElementById("hours");
+            left_minutes = document.getElementById("minutes");
+            left_seconds = document.getElementById("seconds");
+        }
+        function showRemaining() {
+            now = new Date();
+            days_in_this_month = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            days = days_in_this_month - now.getDate();
+            hours = 23 - now.getHours();
+            minutes = 59 - now.getMinutes();
+            seconds = 59 - now.getSeconds();
+            left_days.innerHTML = days + "<span class='small'>Days</span>";
+            left_hours.innerHTML = hours + "<span class='small'>Hours</span>";
+            left_minutes.innerHTML = minutes + "<span class='small'>Mins</span>";
+            left_seconds.innerHTML = seconds + "<span class='small'>Secs</span>";
+        }
+        timer = setInterval(showRemaining, 1000);
+        CountDownTimer();
+    </script>
+</body>
+</html>
