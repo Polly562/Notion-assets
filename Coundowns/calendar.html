@@ -25,9 +25,10 @@
             padding: 0;
         }
 
+        /* Adjusted the size here */
         #calendari {
             margin: 0 auto;
-            font-size: 14px;
+            font-size: 18px; /* Increased from 14px */
         }
 
         table {
@@ -36,19 +37,17 @@
             box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
             background-color: #fff;
             position: absolute;
+            width: 100%; /* Make table take full width */
         }
 
         td, th {
             text-align: center;
             background-color: #fff;
-        }
-
-        th {
-            padding: 10px;
+            padding: 15px; /* Increased padding */
         }
 
         tr:first-child th {
-            font-size: 20px;
+            font-size: 24px; /* Increased font size */
             font-weight: bold;
             border-left: none;
             border-top: none;
@@ -65,10 +64,11 @@
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
             font-weight: normal;
+            padding: 15px; /* Increased padding */
         }
 
         th .any {
-            font-size: 12px;
+            font-size: 14px; /* Increased font size */
             font-weight: normal;
             display: block;
             text-shadow: none;
@@ -76,7 +76,7 @@
         }
 
         tr:nth-child(2) th {
-            padding: 5px;
+            padding: 10px;
         }
 
         td {
@@ -86,7 +86,7 @@
 
         td > span {
             color: #555;
-            padding: 10px;
+            padding: 15px; /* Increased padding */
             display: block;
             border: 2px solid transparent;
             transition: border 0.3s ease;
@@ -122,21 +122,21 @@
             color: #fff;
             font-family: inherit;
             border: none;
-            font-size: 18px;
+            font-size: 24px; /* Increased from 18px */
             font-weight: bold;
             text-shadow: inherit;
             padding: 2px 10px 5px 10px;
             line-height: 1px;
-            height: 30px;
-            width: 30px;
+            height: 40px; /* Increased from 30px */
+            width: 40px; /* Increased from 30px */
             vertical-align: middle;
             border-radius: 100%;
             position: absolute;
-            top: 15px;
+            top: 20px; /* Adjusted position */
         }
 
-        .boto-next { right: 10px; padding-left: 13px; }
-        .boto-prev { left: 10px; padding-right: 13px; }
+        .boto-next { right: 15px; padding-left: 13px; }
+        .boto-prev { left: 15px; padding-right: 13px; }
 
         .boto-next:hover,
         .boto-prev:hover {
